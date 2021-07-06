@@ -1,0 +1,44 @@
+import 'dart:io';
+
+void main() {
+// Number from user
+// Num Even or Odd
+// Num + or -
+var input = userInput();
+var input2 = userInput();
+
+print(addOrCheck(input, input2));
+
+// print('Your Number is: ${evenOrOdd(input)}, ${pOrN(number: input)}');
+}
+
+int userInput() {
+return int.parse(stdin.readLineSync()!);
+}
+
+// Rquired, Positional
+String evenOrOdd(int number) {
+if (number % 2 == 0) {
+return 'Even';
+} else {
+return 'Odd';
+}
+}
+
+// Optional, Named
+String pOrN({required int number}) {
+if (number >= 0) {
+return '+';
+} else {
+return '-';
+}
+}
+
+// Optional, Positional
+String addOrCheck(int num1, [int? num2, int? num3]) {
+if (num2 == null || num3 == null) {
+return 'Your Number is: ${evenOrOdd(num1)}, ${pOrN(number: num1)}';
+} else {
+return 'Add of your numbers is: ${num1 + num2 + num3}';
+}
+} 
