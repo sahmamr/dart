@@ -1,54 +1,54 @@
 import './person.dart';
 
-class Employee extends Worker {
+class Manager extends Person {
   String? phone;
 
-  Employee(
+  Manager(
       {required String id,
       required String name,
-      required String department,
+      required int age,
       required String address,
       this.phone})
       : super(
           id: id,
           name: name,
-          department: department,
+          age: age,
           address: address,
         );
 
   @override
-  void WorkerData() {
+  void personData() {
     print('Phone: $phone');
-    super.WorkerData();
+    super.personData();
   }
 }
 
-class EmployeeList {
-  List<Employee> emp = [];
+class Managers {
+  List<Manager> mng = [];
 
-  void addEmployee({
+  void addManager({
     required String id,
     required String name,
-    required String department,
+    required int age,
     required String address,
     String? phone,
   }) {
-    emp.add(Employee(
+    mng.add(Manager(
       id: id,
       name: name,
-      department: department,
+      age: age,
       address: address,
       phone: phone,
     ));
   }
 
-  void removeEmployee(String id) {
-    emp.removeWhere((Employee) => Employee.id == id);
+  void removeManager(String id) {
+    mng.removeWhere((manager) => manager.id == id);
   }
 
-  void WorkerData() {
-    emp.forEach((element) {
-      element.WorkerData();
+  void managerData() {
+    mng.forEach((element) {
+      element.personData();
     });
   }
 }
