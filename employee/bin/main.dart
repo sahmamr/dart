@@ -3,7 +3,7 @@ import 'dart:io';
 import 'employee.dart';
 
 void main(List<String> args) {
-  var emp = EmployeeTwo();
+  var emp = EmployeeList();
 
   lable:
   while (true) {
@@ -15,8 +15,8 @@ void main(List<String> args) {
 
     switch (op) {
       case '1':
-        print('Enter Employee Data as : id name department address phone');
-        var data = stdin.readLineSync()!.split(' ');
+        print('Enter Employee Data as : id,name,department,address,phone');
+        var data = stdin.readLineSync()!.split(',');
         emp.addEmployee(
           id: data[0],
           name: data[1],
@@ -31,8 +31,9 @@ void main(List<String> args) {
         emp.removeEmployee(id);
         break;
       case '3':
-        print('Employee Data');
-        emp.EmployeeData();
+        print('Enter Employee id');
+        var id = stdin.readLineSync()!;
+        emp.EmployeeData(id);
         break;
       case '4':
         break lable;

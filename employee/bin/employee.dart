@@ -23,7 +23,7 @@ class Employee extends Person {
   }
 }
 
-class EmployeeTwo {
+class EmployeeList {
   List<Employee> emp = [];
 
   void addEmployee({
@@ -46,9 +46,12 @@ class EmployeeTwo {
     emp.removeWhere((Employee) => Employee.id == id);
   }
 
-  void EmployeeData() {
+  void EmployeeData(String id) {
     emp.forEach((element) {
-      element.personData();
+      if (element.id == id) {
+        element.personData();
+      }
+      ;
     });
   }
 }
