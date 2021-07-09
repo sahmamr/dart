@@ -29,7 +29,7 @@ class Student extends Person {
         '\nstudent-id: $id, Name: $name, Age: $age, Address: $address, Email: $email, phone: $phone');
     subjects.isNotEmpty
         ? print('student $name Subject')
-        : print('student, $name does not belong to any subject\n');
+        : print('student does not belong to any subject\n');
     subjects.forEach((key, value) {
       print('$key: $value');
     });

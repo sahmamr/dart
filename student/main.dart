@@ -23,10 +23,19 @@ void main(List<String> arguments) {
       age: 26,
       address: 'Lubban',
       phone: '+96279000000000',
-      email: 'sahm_amr@hotmail.com');
+      email: 'a.alian@gmail.com');
+  allstds.addStudent(
+      id: '4',
+      name: 'Lian Amr',
+      age: 26,
+      address: 'Tla"a al-ali',
+      phone: '+9627912121212',
+      email: 'lian@hotmail.com');
 
   allstds.removeStudent('3');
-  allstds.addSubject('2', 'Physics', 51);
+  allstds.addSubject('1', 'Physics', 51);
+  allstds.addSubject('2', 'Math', 49);
+  allstds.addSubject('4', 'Arabic', 44);
   allstds.printStudentData();
   allstds.calculateStudentGrade('1');
 }

@@ -59,10 +59,10 @@ class Students {
         }
       });
       if (stdfail) {
-        print('Congratulations, Student $id PASSED');
+        print('Congratulations, Student Number $id PASSED');
       } else {
         std.subjects.forEach((name, grade) {
-          print('$name: $grade');
+          print('Sorry you Fail $name: $grade');
         });
       }
     }
