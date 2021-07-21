@@ -1,3 +1,4 @@
-2021/07/19-18:49:29.057 5 Reusing MANIFEST /tmp/flutter_tools.ULPBYA/flutter_tools_chrome_device.QPBARK/Default/Session Storage/MANIFEST-000001
-2021/07/19-18:49:29.057 5 Recovering log #3
-2021/07/19-18:49:29.057 5 Reusing old log /tmp/flutter_tools.ULPBYA/flutter_tools_chrome_device.QPBARK/Default/Session Storage/000003.log 
+2021/07/21-14:30:34.136 3 Reusing MANIFEST /tmp/flutter_tools.STOEYY/flutter_tools_chrome_device.HGWXRD/Default/Session Storage/MANIFEST-000001
+2021/07/21-14:30:34.138 3 Recovering log #3
+2021/07/21-14:30:34.138 3 (ignoring error) /tmp/flutter_tools.STOEYY/flutter_tools_chrome_device.HGWXRD/Default/Session Storage/000003.log: dropping 45 bytes; Corruption: checksum mismatch
+2021/07/21-14:30:34.138 3 Reusing old log /tmp/flutter_tools.STOEYY/flutter_tools_chrome_device.HGWXRD/Default/Session Storage/000003.log 

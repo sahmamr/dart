@@ -129,46 +129,57 @@ class MyHomeScreen extends StatelessWidget {
                           ]));
                 })),
         Container(
-            height: 80,
-            margin: EdgeInsets.only(left: 14),
-            child: ListView.builder(
-                scrollDirection: Axis.vertical,
-                itemCount: 4,
-                itemBuilder: (context, index) {
-                  return Container(
-                      height: 80,
-                      width: 80,
-                      margin: EdgeInsets.only(left: 10),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: <Widget>[
-                            Container(
-                                height: 80,
-                                width: 80,
-                                margin: EdgeInsets.only(left: 10),
-                                padding: EdgeInsets.only(bottom: 6),
-                                decoration: BoxDecoration(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(30)),
-                                  color: Colors.transparent,
-                                ),
-                                child: CircleAvatar(
-                                  backgroundColor: Colors.transparent,
-                                  radius: 30,
-                                  child: CircleAvatar(
-                                    radius: 30,
-                                    backgroundImage: NetworkImage(
-                                        'https://cdn3.iconfinder.com/data/icons/basic-ui-elementssky-blue/177/person-512.png'),
-                                  ),
-                                )),
-                            Text("Abdullah Saqer",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w800,
-                                ))
-                          ]));
-                }))
+          margin: EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 10),
+          height: 600,
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return ListTile(
+                contentPadding: EdgeInsets.only(bottom: 10, right: 8),
+                leading: Stack(
+                  children: <Widget>[
+                    Container(
+                      height: 60,
+                      width: 60,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(30)),
+                        color: Colors.transparent,
+                      ),
+                      child: ClipOval(
+                          child: CircleAvatar(
+                        backgroundColor: Colors.transparent,
+                        radius: 30,
+                        child: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: NetworkImage(
+                              'https://cdn3.iconfinder.com/data/icons/basic-ui-elementssky-blue/177/person-512.png'),
+                        ),
+                      )),
+                    ),
+                  ],
+                ),
+                title: Padding(
+                  padding: EdgeInsets.only(bottom: 6),
+                  child: Text(
+                    "Abdullah Saqer",
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500, color: Colors.white),
+                  ),
+                ),
+                subtitle: Text(
+                  "This is message from Abdullah Saqer",
+                  style: TextStyle(
+                      fontWeight: FontWeight.w400, color: Colors.grey),
+                ),
+                trailing: Icon(
+                  Icons.check_circle,
+                  size: 20,
+                  color: Colors.grey,
+                ),
+              );
+            },
+            itemCount: 15,
+          ),
+        ),
       ]),
     );
   }
